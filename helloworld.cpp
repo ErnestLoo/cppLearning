@@ -17,6 +17,13 @@ int main(){
   std::cout << x << '\n';
   std::cout << y << '\n';
   std::cout << sum << '\n';
+
+  std::string name = "Bro";
+  std::string age = "20";
+
+  std::cout << name;
+  std::cout << "Hello " << name << '\n';
+  std::cout << "You are " << age << " years old";
   
   return 0;
 }
