@@ -1,29 +1,20 @@
 #include <iostream>
 
+
 int main(){
 
-  //This is a comment
-  /*
-  multi-line comment
-  */
-
-  // std::cout << "I like pizza!" << '\n';
-  // std::cout << "It's really good" << '\n';
+  std::string name;
+  int age;
   
-  int x = 5;
-  int y = 6;
-  int sum = x + y;
+  std::cout<< "How old are you?: ";
 
-  std::cout << x << '\n';
-  std::cout << y << '\n';
-  std::cout << sum << '\n';
+  std::cin>> age;
 
-  std::string name = "Bro";
-  std::string age = "20";
+  std::cout<< "What is your name?: ";
 
-  std::cout << name;
-  std::cout << "Hello " << name << '\n';
-  std::cout << "You are " << age << " years old";
+  std::getline(std::cin >> std::ws, name);
+
+  std::cout<< "Hello " << name << ". You are " << age << " years old.";
   
   return 0;
 }
