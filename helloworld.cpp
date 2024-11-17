@@ -1,20 +1,40 @@
 #include <iostream>
-
+#include <cmath>
 
 int main(){
 
-  std::string name;
-  int age;
-  
-  std::cout<< "How old are you?: ";
+/*
+math functions
+  double x = 3;
+  double y = 4;
+  double z;
 
-  std::cin>> age;
+  z = std::max(x,y);
+  z = std::min(x,y);
+  z = pow(2,3); 
+  z= abs(-3);
 
-  std::cout<< "What is your name?: ";
+  x = 3.14;
 
-  std::getline(std::cin >> std::ws, name);
+  z = round(x);
+  z = ceil(x);
+  z = floor(x);
 
-  std::cout<< "Hello " << name << ". You are " << age << " years old.";
-  
+  std::cout<< z;
+*/
+
+  double a;
+  double b;
+  double c;
+
+  std::cout << "Enter side A: ";
+  std::cin >> a;
+  std::cout << "Enter side B: ";
+  std::cin >> b;
+
+  c = sqrt(pow(a,2) + pow(b,2));
+
+  std::cout << "Side C: " << c;
+
   return 0;
 }
