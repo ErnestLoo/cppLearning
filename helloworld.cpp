@@ -1,40 +1,46 @@
 #include <iostream>
-#include <cmath>
 
-int main(){
+int main()
+{
 
-/*
-math functions
-  double x = 3;
-  double y = 4;
-  double z;
+  char op;
+  double num1;
+  double num2;
+  double result;
 
-  z = std::max(x,y);
-  z = std::min(x,y);
-  z = pow(2,3); 
-  z= abs(-3);
+  std::cout << "\n**************** CALCULATOR ****************\n";
 
-  x = 3.14;
+  std::cout << "Enter either (+ - * /): ";
+  std::cin >> op;
 
-  z = round(x);
-  z = ceil(x);
-  z = floor(x);
+  std::cout << "Enter number 1: ";
+  std::cin >> num1;
+  std::cout << "Enter number 2: ";
+  std::cin >> num2;
 
-  std::cout<< z;
-*/
+  switch (op){
+    case '+':
+      result = num1 + num2;
+      std::cout << "result: " << result << '\n';
+      break;
+    case '-':
+      result = num1 - num2;
+      std::cout << "result: " << result << '\n';
+      break;
+    case '*':
+      result = num1 * num2;
+      std::cout << "result: " << result << '\n';
+      break;
+    case '/':
+      result = num1 / num2;
+      std::cout << "result: " << result << '\n';
+      break;
+    default:
+      std::cout << "Please enter operators only!\n";
+      break;
+  }
 
-  double a;
-  double b;
-  double c;
-
-  std::cout << "Enter side A: ";
-  std::cin >> a;
-  std::cout << "Enter side B: ";
-  std::cin >> b;
-
-  c = sqrt(pow(a,2) + pow(b,2));
-
-  std::cout << "Side C: " << c;
+  std::cout << "********************************************\n";
 
   return 0;
 }
