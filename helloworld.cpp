@@ -3,44 +3,24 @@
 int main()
 {
 
-  char op;
-  double num1;
-  double num2;
-  double result;
+  std::string name;
 
-  std::cout << "\n**************** CALCULATOR ****************\n";
+  std::cout << "Enter your name: ";
 
-  std::cout << "Enter either (+ - * /): ";
-  std::cin >> op;
+  std::getline(std::cin, name);
 
-  std::cout << "Enter number 1: ";
-  std::cin >> num1;
-  std::cout << "Enter number 2: ";
-  std::cin >> num2;
-
-  switch (op){
-    case '+':
-      result = num1 + num2;
-      std::cout << "result: " << result << '\n';
-      break;
-    case '-':
-      result = num1 - num2;
-      std::cout << "result: " << result << '\n';
-      break;
-    case '*':
-      result = num1 * num2;
-      std::cout << "result: " << result << '\n';
-      break;
-    case '/':
-      result = num1 / num2;
-      std::cout << "result: " << result << '\n';
-      break;
-    default:
-      std::cout << "Please enter operators only!\n";
-      break;
+  if (name.empty())
+  {
+    std::cout << "You didn't enter anything.\n";
   }
-
-  std::cout << "********************************************\n";
+  else if (name.length() > 12)
+  {
+    std::cout << "Your name cannot be 12 letters long.\n";
+  }
+  else
+  {
+    std::cout << "Your name is " << name;
+  }
 
   return 0;
 }
