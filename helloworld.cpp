@@ -3,24 +3,18 @@
 int main()
 {
 
-  std::string name;
+  std::string name = "Bro";
+  int age = 21;
+  std::string freePizzas[5] = {"pizza1","pizza2","pizza3","pizza4","pizza5"};
 
-  std::cout << "Enter your name: ";
 
-  std::getline(std::cin, name);
+  std::string *pName = &name;
+  int *pAge = &age;
+  std::string *pFreePizza = freePizzas;
 
-  if (name.empty())
-  {
-    std::cout << "You didn't enter anything.\n";
-  }
-  else if (name.length() > 12)
-  {
-    std::cout << "Your name cannot be 12 letters long.\n";
-  }
-  else
-  {
-    std::cout << "Your name is " << name;
-  }
+  std::cout << *pName << '\n';
+  std::cout << *pAge << '\n';
+  std::cout << *pFreePizza << '\n';
 
   return 0;
 }
