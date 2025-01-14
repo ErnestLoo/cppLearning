@@ -2,19 +2,17 @@
 
 int main()
 {
+  
+  int *pNum = NULL;
 
-  std::string name = "Bro";
-  int age = 21;
-  std::string freePizzas[5] = {"pizza1","pizza2","pizza3","pizza4","pizza5"};
+  pNum = new int;
 
+  *pNum = 21;
 
-  std::string *pName = &name;
-  int *pAge = &age;
-  std::string *pFreePizza = freePizzas;
+  std::cout << "addresss: " << pNum << '\n';
+  std::cout << "value: " << *pNum << '\n';
 
-  std::cout << *pName << '\n';
-  std::cout << *pAge << '\n';
-  std::cout << *pFreePizza << '\n';
+  delete pNum;
 
   return 0;
 }
